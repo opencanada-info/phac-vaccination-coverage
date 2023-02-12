@@ -1,6 +1,6 @@
 # phac-vaccination-coverage
 
-Source: Public Health Agency of Canada - [COVID-19 vaccination in Canada](https://health-infobase.canada.ca/covid-19/vaccination-coverage/): <https://health-infobase.canada.ca/covid-19/vaccination-coverage>
+Source: Public Health Agency of Canada - [COVID-19 vaccination in Canada](https://health-infobase.canada.ca/covid-19/vaccination-coverage/): <https://health-infobase.canada.ca/covid-19/vaccination-coverage>. 
 
 Direct link to data: <https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv>
 Excessed: 2023-02-01
@@ -25,7 +25,9 @@ Variables and Fields:
 Related datasets - from the same page:
 
 ```
+# Figure 1
 url <- "https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-map.csv"
+# Figure 5
 url <- "https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byVaccineType.csv"
 ```
 
@@ -33,7 +35,8 @@ url <- "https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverag
 ###  Code to cache and clean data
 
 ```
-library(data.table0  
+# Figure 3
+library(data.table) 
 phac.csv <- "vaccination-coverage-byAgeAndSex-overTimeDownload.csv"
 url <- paste0("https://health-infobase.canada.ca/src/data/covidLive/",phac.csv)
 dt  <- fread(url)
